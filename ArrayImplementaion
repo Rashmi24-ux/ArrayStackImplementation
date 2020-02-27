@@ -1,0 +1,61 @@
+ import java.util.*;
+ class Stack {
+    int arr[] =new int[10];
+    int top=-1;
+    void push(int x)
+    {
+        if(top >=9)
+        {
+            System.out.println("Erroe : Stack overflow");
+            return;
+            
+        }
+        top=top+1;
+        arr[top]=x;
+        
+    }
+    int pop()
+    {
+        if(top==-1)
+        {
+            System.out.println("No element to pop");
+            return -1;
+            
+        }
+        top=top-1;
+        return arr[top+1];
+    }
+    boolean isEmpty()
+    {
+        if(top == -1)
+        {
+            return true;
+        }
+        return false;
+    }
+    void print()
+    {
+        System.out.print("stack : ");
+        for(int i=0;i<=top;i++)
+        {
+            System.out.print(arr[i]+" ");
+             }
+    System.out.println();
+    }
+}
+public class ArrayStack extends Stack
+{
+    public static void main(String args[]) {
+      Stack s=new Stack ();
+      s.push(2); s.print();
+       s.push(4); s.print();
+        s.push(6); s.print();
+         s.push(8); s.print();
+         s.pop(); s.print();
+          s.push(10); s.print();
+           s.push(12); s.print();
+            s.push(14); s.print();
+             s.push(16); s.print();
+              s.push(18); s.print();
+    }
+}
